@@ -1,0 +1,67 @@
+#h1 {
+	text-align: center;
+	font-family: 'WindSong', cursive;
+}
+
+#logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#top {
+	background-color: #ededed;
+}
+
+#about {
+	margin-right: 350px;
+	padding: 0 30px 20px 50px;
+}
+
+#abouttext {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+#pastry {
+	height: auto;
+	width: 40%;
+	margin-left: 350px;
+	margin-right: 20px;
+	padding-bottom: 30px;
+}
+
+
+#shop {
+	text-align: center;
+}
+
+.order {
+	width: 400px;
+	height: 300px;
+	padding-left: 37px;
+}
+
+.item {
+	float: left;
+}
+
+.caption {
+	width: 450px;
+	text-align: center;
+	font-size: large;
+	padding-bottom: 10px;
+}
+
+.cart {
+  background-color: #4287f5; 
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 37px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
