@@ -19,8 +19,9 @@
 }
 
 #abouttext {
-	padding-top: 20px;
+	padding-top: 5px;
 	padding-bottom: 20px;
+	font-family: 'PT Sans', sans-serif;
 }
 
 #pastry {
@@ -34,6 +35,7 @@
 
 #shop {
 	text-align: center;
+	font-family: 'PT Sans', sans-serif;
 }
 
 .order {
