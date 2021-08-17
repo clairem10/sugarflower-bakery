@@ -44,8 +44,12 @@
 .caption {
 	width: 450px;
 	text-align: center;
-	font-size: large;
-	padding-bottom: 10px;
+	font-size: x-large;
+}
+
+.price {
+	text-align: center;
+	font-size: x-large;
 }
 
 .cart {
@@ -74,7 +78,7 @@
 
 #cartinfo {
 	background-color: #85b4ff;
-	display: none;
+	display: block;
 	position: absolute;
 }
 
