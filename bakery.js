@@ -7,11 +7,40 @@ function showCart() {
 	}
 }
 
-// Add to cart 
-function addToCart() {
-	document.getElementByClassName()
+// Add to cart button clicked
+function addCartClick(e) {
+	var click = e.target;
+	var item = click.parentElement.parentElement;
+	var name = item.getElementsByClassName('caption')[0].innerText;
+	var price = item.getElementsByClassName('price')[0].innerText;
+	addCartItem(name, price);
+} 
+
+// Display item in cart
+function addCartItem(name, price) {
+	var div = document.createElement('div');
+	var cartInfo = document.getElementById('cartinfo');
+	var itemName = document.createElement('p');
+	var itemPrice = document.createElement('p');
+	itemName.innerHTML = name;
+	itemPrice.innerHTML = price;
+	itemName.appendChild(div);
+	itemPrice.appendChild(div);
+	div.appendChild(cartInfo);
 }
 
+// Remove from cart 
+function removeCartItem(e) {
+	var button = e.target;
+	button.parentElement.parentElment.remove();
+}
 
-document.getElementById('shoppingcart').addEventListener('click', showCart);
+var add = document.getElementsByClassName('cart');
+for (var i=0; i < add.length; i++) {
+	var button = add[i];
+	console.log('hi');
+	button.addEventListener('click', addCartClick);
+}
+
+// document.getElementById('shoppingcart').addEventListener('click', showCart);
 
