@@ -73,16 +73,41 @@
 
 .shop {
 	float: right;
-	padding-right: 60px;
 }
 
 #cartinfo {
-	background-color: #85b4ff;
-	display: block;
+	background-color: #d9e7ff;
+	height: 100%;
+	width: 20%;
+	display: none;
+	right: 0;
 	position: absolute;
 }
 
 #container {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.total {
+	font-family: 'PT Sans', sans-serif;
+	text-align: center;
+	font-size: large;
+}
+
+#clear {
+	cursor: pointer;
+	border: none;
+	background-color: lightgray;
+	bottom: 0;
+	font-size: large;
+	padding: 10px 20px;
+	position: absolute;
+	left: 35%;
+}
+
+#x {
+	float: right;
+	padding-right: 10px;
+	cursor: pointer;
 }
