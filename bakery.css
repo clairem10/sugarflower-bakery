@@ -20,14 +20,11 @@
 
 #aboutimg {
 	padding-right: 50px;
+	max-width: 500px;
 }
 
 #pastry {
 	width: 100%;
-}
-
-#abouttext {
-	max-width: 500px;
 }
 
 #shop {
@@ -57,18 +54,28 @@
   border: none;
   color: white;
   padding: 10px 20px;
-  margin-left: 37px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
   font-size: 16px;
   cursor: pointer;
+}
+
+.cart:hover {
+	opacity: 0.8;
 }
 
 #shoppingcart {
 	font-size: 36px;
 	color: #4684e3;
 	cursor: pointer;
+	position: fixed;
+	right: 15px;
+}
+
+#shoppingcart:hover {
+	opacity: 0.8;
 }
 
 .shop {
@@ -81,7 +88,8 @@
 	width: 20%;
 	display: none;
 	right: 0;
-	position: absolute;
+	position: fixed;
+	z-index: 1;
 }
 
 #container {
@@ -93,6 +101,7 @@
 	font-family: 'PT Sans', sans-serif;
 	text-align: center;
 	font-size: large;
+	justify-content: center;
 }
 
 #clear {

@@ -13,8 +13,6 @@
 	</head>
 
 	<body>
-		<div class="cart-items">
-		</div>
 		<div id="cartinfo">
 			<h2 id="x">&#x2715;</h2>
 			<p class="total" id="total-title">Total: </p>
@@ -94,27 +92,29 @@
 				</div>
 			</div>
 
-			<!-- The core Firebase JS SDK is always required and must be listed first -->
-			<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 
-			<!-- TODO: Add SDKs for Firebase products that you want to use
-				     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+				 https://firebase.google.com/docs/web/setup#available-libraries -->
 
-			<script>
-				  // Your web app's Firebase configuration
-				var firebaseConfig = {
-				   apiKey: "AIzaSyBtOVROxLAKlnh_Q4g7X60qunfwBOQiy3o",
-				   authDomain: "sizesaver-b411a.firebaseapp.com",
-				   projectId: "sizesaver-b411a",
-				   storageBucket: "sizesaver-b411a.appspot.com",
-				   messagingSenderId: "359014762473",
-				   appId: "1:359014762473:web:a4ad7647e2fe43b91cad78"
-				};
-				  
-				// Initialize Firebase
-				firebase.initializeApp(firebaseConfig);
-			</script>
-		</div>
+		<script>
+		// Your web app's Firebase configuration
+		 var firebaseConfig = {
+		 	apiKey: "AIzaSyCK8cfBWO_x11wnuxMmxTxZ7IUVsvdkVO0",
+			authDomain: "sugarflower-bakery.firebaseapp.com",
+			databaseURL: "https://sugarflower-bakery-default-rtdb.firebaseio.com",
+			projectId: "sugarflower-bakery",
+			storageBucket: "sugarflower-bakery.appspot.com",
+			messagingSenderId: "265518073742",
+			appId: "1:265518073742:web:d5c01d6e9b13aad05486df"
+		};
+		// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+		</script>
+
+		<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+		
 	</body>
 
 	<script src="bakery.js"></script>

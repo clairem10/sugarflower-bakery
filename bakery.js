@@ -1,3 +1,10 @@
+// Retrieve cart information from Firebase
+function retrieveCart() {
+	firebase.database().ref(path).[limitToLast(#)].on(‘child_added’, (snapshot) => {
+	snapshot.val();
+	});
+}
+
 // Show cart 
 function showCart() {
 	var btn = document.getElementById('shoppingcart');
@@ -18,6 +25,12 @@ function addCartClick(e) {
 	addCartItem(name, price);
 	alert('Item added to cart');
 	updateTotal();
+	var itemData = {
+		'name': name, 
+		'price': price
+	}
+	console.log(itemData);
+	firebase.database().ref().push(itemData);
 } 
 
 // Display item in cart
