@@ -1,14 +1,18 @@
-// Retrieve cart information from Firebase
-function retrieveCart() {
-	firebase.database().ref(path).[limitToLast(#)].on(‘child_added’, (snapshot) => {
-	snapshot.val();
-	});
-}
+var databaseRef = firebase.database().ref();
+
+databaseRef.on('child_added', (snapshot) => {
+	addCartItem(snapshot.val().name, snapshot.val().price);
+});
+
+// databaseRef.on('child_removed', (snapshot) => {
+// 	snapshot.key;
+// });
 
 // Show cart 
 function showCart() {
 	var btn = document.getElementById('shoppingcart');
 	document.getElementById('cartinfo').style.display = 'block';
+	updateTotal();
 }
 
 // Hide cart 
@@ -22,16 +26,16 @@ function addCartClick(e) {
 	var item = click.parentElement.parentElement;
 	var name = item.getElementsByClassName('caption')[0].innerText;
 	var price = item.getElementsByClassName('price')[0].innerText;
-	addCartItem(name, price);
+	//addCartItem(name, price);
 	alert('Item added to cart');
 	updateTotal();
 	var itemData = {
 		'name': name, 
 		'price': price
 	}
-	console.log(itemData);
-	firebase.database().ref().push(itemData);
-} 
+	var pushedRef = firebase.database().ref().push(itemData);
+	console.log(pushedRef.key);
+} 	
 
 // Display item in cart
 function addCartItem(name, price) {
@@ -52,12 +56,14 @@ function addCartItem(name, price) {
 }
 
 // Remove from cart 
-function removeCartItem(e) {
+function removeCartItem(e, id) {
 	var button = e.target;
-	button.parentElement.parentElement.remove();
+	var parent = button.parentElement.parentElement;
+	parent.remove();
 	alert('Item removed');
 	var price = document.getElementsByClassName('cart-item-price')[0];
 	updateTotal();
+	firebase.database().ref(id).remove();
 }
 
 
@@ -71,7 +77,6 @@ function updateTotal() {
 		var price = price.replace('$', '');
 		total += parseInt(price);
 	}
-	console.log(total);
 	document.getElementById('total-amount').innerHTML = '$' + total;
 }
 
