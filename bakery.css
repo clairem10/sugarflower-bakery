@@ -82,6 +82,14 @@
 	float: right;
 }
 
+#auth {
+	float: right;
+	margin-right: 50px;
+	margin-top: 10px;
+	cursor: pointer;
+	border: none;
+}
+
 #cartinfo {
 	background-color: #d9e7ff;
 	height: 100%;
